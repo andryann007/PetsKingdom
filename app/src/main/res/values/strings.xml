@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">Pets Kingdom</string>
+    <string name="firebase_webclient_id">AIzaSyC01PFJS82BeGspJ388U12iX0Z8bBgq6ls</string>
+    <string name="login_menu">Login</string>
+    <string name="logo_description">Logo Description</string>
+    <string name="input_email">Input Email :</string>
+    <string name="email_description">Email</string>
+    <string name="input_password">Input Password :</string>
+    <string name="password_description">Password</string>
+    <string name="forget_password_decription">Forget Password ?</string>
+    <string name="button_login_description">Login</string>
+    <string name="button_reset_description">Reset</string>
+    <string name="tv_register_description">Don\'t have account ? Register Here</string>
+    <string name="back_description">Back Button</string>
+    <string name="forget_password_note1">Forget Password ?</string>
+    <string name="forget_password_note2">We will reset your password</string>
+    <string name="forget_password_req">Please Input Your Email :</string>
+    <string name="button_submit_description">Submit</string>
+    <string name="register_menu">Register</string>
+    <string name="input_full_name">Input Name :</string>
+    <string name="username_description">Username</string>
+    <string name="re_input_password">Re-Input Password :</string>
+    <string name="password_confirmation">Password Confirmation</string>
+    <string name="button_register_description">Register</string>
+    <string name="title_activity_drawer">Drawer</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="textview">Title</string>
+    <string name="description">Description</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_account">Account</string>
+    <string name="title_favorite">Favorite</string>
+</resources>
