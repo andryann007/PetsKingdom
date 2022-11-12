@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.home.HomeFragment">
 
     <RelativeLayout
@@ -16,7 +17,8 @@
             android:layout_height="?actionBarSize"
             android:layout_alignParentTop="true"
             android:layout_marginHorizontal="10dp"
-            android:layout_marginVertical="5dp"/>
+            android:layout_marginVertical="5dp"
+            android:background="#808080"/>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView"

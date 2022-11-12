@@ -75,13 +75,13 @@ public class FavoriteFragment extends Fragment implements AdapterPetCatalog.OnGr
         };
 
         String[] salesCount = {
-                "230 pcs sold",
-                "145 pcs sold"
+                "230 sold",
+                "145 sold"
         };
 
         int[] favorite = {
-                R.drawable.ic_favorite_border,
-                R.drawable.ic_favorite_border,
+                R.drawable.ic_favorite,
+                R.drawable.ic_favorite,
         };
 
         for(int i=0; i < imageId.length; i++){

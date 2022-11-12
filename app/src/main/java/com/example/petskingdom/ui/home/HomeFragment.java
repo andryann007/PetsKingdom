@@ -94,12 +94,12 @@ public class HomeFragment extends Fragment implements AdapterPetCatalog.OnGridIt
         };
 
         String[] salesCount = {
-                "230 pcs sold",
-                "120 pcs sold",
-                "175 pcs sold",
-                "145 pcs sold",
-                "120 pcs sold",
-                "90 pcs sold"
+                "230 sold",
+                "120 sold",
+                "175 sold",
+                "145 sold",
+                "120 sold",
+                "90 sold"
         };
 
         int[] favoriteOutlined = {

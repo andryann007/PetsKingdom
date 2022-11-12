@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardBackgroundColor="@color/black"
     app:cardElevation="5dp"
-    app:cardCornerRadius="10dp"
+    app:cardCornerRadius="5dp"
     app:cardMaxElevation="5dp">
 
     <RelativeLayout
@@ -17,7 +17,7 @@
             android:id="@+id/categoryProduct"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="15dp"
+            android:layout_marginBottom="5dp"
             android:layout_marginHorizontal="15dp"
             android:text="@string/product_category"
             android:fontFamily="sans-serif"
@@ -37,6 +37,7 @@
             android:id="@+id/imageView"
             android:layout_width="200dp"
             android:layout_height="200dp"
+            android:scaleType="fitXY"
             android:layout_below="@+id/categoryProduct"
             android:layout_centerHorizontal="true"
             android:contentDescription="@string/product_image" />
@@ -72,6 +73,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/title"
             android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
             android:layout_marginHorizontal="15dp"
             android:text="@string/sales_count"
             android:fontFamily="sans-serif"
