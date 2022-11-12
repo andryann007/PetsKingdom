@@ -5,20 +5,17 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.petskingdom.R;
 import com.example.petskingdom.adapter.AdapterPetCatalog;
 import com.example.petskingdom.databinding.FragmentFavoriteBinding;
-import com.example.petskingdom.databinding.FragmentHomeBinding;
 import com.example.petskingdom.model.ModelPetCatalog;
 
 import java.util.ArrayList;
@@ -72,12 +69,29 @@ public class FavoriteFragment extends Fragment implements AdapterPetCatalog.OnGr
                 "Rp. 350.000",
                 "Rp. 150.000"
         };
+        String[] category = {
+                "Dog Food",
+                "Cat Food"
+        };
+
+        String[] salesCount = {
+                "230 pcs sold",
+                "145 pcs sold"
+        };
+
+        int[] favorite = {
+                R.drawable.ic_favorite_border,
+                R.drawable.ic_favorite_border,
+        };
 
         for(int i=0; i < imageId.length; i++){
             modelPetCatalog = new ModelPetCatalog();
             modelPetCatalog.setImageId(imageId[i]);
             modelPetCatalog.setTitle(title[i]);
             modelPetCatalog.setDescription(price[i]);
+            modelPetCatalog.setCategory(category[i]);
+            modelPetCatalog.setSalesCount(salesCount[i]);
+            modelPetCatalog.setFavoriteOutlined(favorite[i]);
             list.add(modelPetCatalog);
         }
         adapterPetCatalog.addAll(list);

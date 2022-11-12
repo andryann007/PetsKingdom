@@ -43,4 +43,8 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_account">Account</string>
     <string name="title_favorite">Favorite</string>
+    <string name="product_category">Product Category</string>
+    <string name="product_image">Product Image</string>
+    <string name="favorite_button">Favorite Button</string>
+    <string name="sales_count">Sales Count</string>
 </resources>

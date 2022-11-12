@@ -65,6 +65,9 @@ public class AdapterPetCatalog extends RecyclerView.Adapter<AdapterPetCatalog.Vi
         holder.imageView.setImageResource(modelPetCatalog.getImageId());
         holder.title.setText(modelPetCatalog.getTitle());
         holder.description.setText(modelPetCatalog.getDescription());
+        holder.category.setText(modelPetCatalog.getCategory());
+        holder.salesCount.setText(modelPetCatalog.getSalesCount());
+        holder.favoriteOutlined.setImageResource(modelPetCatalog.getFavoriteOutlined());
     }
 
     @Override
@@ -73,14 +76,17 @@ public class AdapterPetCatalog extends RecyclerView.Adapter<AdapterPetCatalog.Vi
     }
 
     public static class ViewHolderPetCatalog extends RecyclerView.ViewHolder{
-        public ImageView imageView;
-        public TextView title, description;
+        public ImageView imageView, favoriteOutlined;
+        public TextView title, description, category, salesCount;
 
         public ViewHolderPetCatalog(View itemView){
             super(itemView);
             imageView = itemView.findViewById(R.id.imageView);
             title = itemView.findViewById(R.id.title);
             description = itemView.findViewById(R.id.description);
+            category = itemView.findViewById(R.id.categoryProduct);
+            salesCount = itemView.findViewById(R.id.salesCount);
+            favoriteOutlined = itemView.findViewById(R.id.favoriteButton);
         }
     }
 
