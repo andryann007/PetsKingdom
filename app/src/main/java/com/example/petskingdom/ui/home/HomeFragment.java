@@ -35,8 +35,6 @@ public class HomeFragment extends Fragment implements AdapterPetCatalog.OnGridIt
             R.drawable.whiskas,
             R.drawable.whiskas_2,
             R.drawable.whiskas_3,
-            R.drawable.hikari,
-            R.drawable.hikari_2
     };
     String[] title = {
             "Pedigree Dry Dog Food Adult Grilled Steak & Vegetable Flavor",
@@ -45,8 +43,6 @@ public class HomeFragment extends Fragment implements AdapterPetCatalog.OnGridIt
             "Whiskas Dry Adult Skin & Coat",
             "Whiskas Dry Adult Hairball Control",
             "Whiskas Dry Adult Indoor",
-            "Hikari Hi-Growth",
-            "Hikari Sinking Goldfish Excel"
     };
     String[] price = {
             "Rp. 350.000",
@@ -55,8 +51,6 @@ public class HomeFragment extends Fragment implements AdapterPetCatalog.OnGridIt
             "Rp. 150.000",
             "Rp. 170.000",
             "Rp. 175.000",
-            "Rp. 350.000",
-            "Rp. 120.000"
     };
 
     String[] category = {
@@ -66,8 +60,6 @@ public class HomeFragment extends Fragment implements AdapterPetCatalog.OnGridIt
             "Cat Food",
             "Cat Food",
             "Cat Food",
-            "Fish Food",
-            "Fish Food",
     };
 
     String[] size = {
@@ -77,8 +69,6 @@ public class HomeFragment extends Fragment implements AdapterPetCatalog.OnGridIt
             "4 kg",
             "4 kg",
             "4 kg",
-            "2 kg",
-            "0.1 kg",
     };
 
     String[] description = {
@@ -88,75 +78,15 @@ public class HomeFragment extends Fragment implements AdapterPetCatalog.OnGridIt
             "Bulu dan kulit yang indah adalah ciri khas kucing yang dirawat dengan baik dan sehat. Banyak faktor yang bisa menyebabkan kesehatan kulit & bulu yang jelek, seperti nutrisi yang buruk, berat badan yang berlebihan (yang mempersulit kucing Anda merawat tubuh mereka sendiri), usia tua dan bahkan terlalu sering dimandikan (yang bisa menghilangkan minyak alami dan menyebabkan iritasi kulit).",
             "Kucing menghabiskan setidaknya lima jam sehari untuk merawat dirinya. Lidah mereka yang kasar seperti amplas mudah menjaring rambut yang terlepas, yang kemudiannya tertelan. Meskipun bulu tersebut biasanya bisa melewati usus dan dikeluarkan melalui feses, beberapa kucing (terutama kucing berambut panjang) cenderung membentuk hairball di perutnya. Memang kucing dapat memuntahkan hairball (sesuatu yang sudah cukup tidak menyenangkan), namun hairball yang menumpuk di perut dapat menjadi masalah serius jika tersendat pada saluran pencernaan.",
             "Sebagai pencipta makanan kucing WHISKAS®, kami tahu bahwa kucing rumahan memiliki kebutuhan diet khusus yang perlu disesuaikan dengan gaya hidup mereka yang santai. Kucing rumahan cenderung menghabiskan waktu mereka dengan tidur dan bersantai di tempat favorit mereka seharian, mereka tidak terlalu aktif dan membutuhkan hanya sedikit energi. Karena itu, kucing rumahan lebih rentan terhadap kenaikan berat badan. Juga, dengan kurangnya bergerak, pergerakan usus merekapun menjadi lamban, ini menyebabkan feses mereka menjadi sangat bau dan mengganggu kenyamanan pemilik kucing.",
-            "A powerful summertime diet full of necessary proteins, vitamins and minerals that will allow you to have that championship size koi you've always dreamed of.",
-            "Contains Spirulina & Other Vegetable Matter Most Goldfish Crave Highly Digestible To Offer Rapid Growth & Desirable Form",
     };
 
     String[] nutrition = {
-            "Vitamin E : 100 IU/kg\n" +
-                    "Crude Protein : 21.0%\n" +
-                    "Crude Fat (min.) : 10.0%\n" +
-                    "Crude Fiber : 4.0%\n" +
-                    "Phosphorus : 0.8%\n" +
-                    "Calcium : 1.0%\n" +
-                    "Moisture : 12.0%",
-
-            "Vitamin E : 80 IU/kg\n" +
-                    "Zinc (Zinc sulphate, monohydrate) : 80 mg/kg\n" +
-                    "Crude Protein : 21.0%\n" +
-                    "Crude Fat (min.) : 10.0%\n" +
-                    "Crude Fiber : 4.0%\n" +
-                    "Phosphorus : 0.8%\n" +
-                    "Calcium : 1.0%\n" +
-                    "Moisture : 12.0%",
-
-            "Vitamin E : 100 IU/kg\n" +
-                    "Crude Protein : 21.0%\n" +
-                    "Crude Fat (min.) : 10.0%\n" +
-                    "Crude Fiber : 4.0%\n" +
-                    "Phosphorus : 0.8%\n" +
-                    "Calcium : 1.0%\n" +
-                    "Moisture : 12.0%",
-
-            "Vitamin E : 75 IU/kg\n" +
-                    "Crude Protein : 36.50%\n" +
-                    "Crude Fat (min.) : 14.0%\n" +
-                    "Crude Fiber : 4.0%\n" +
-                    "Phosphorus : 0.8%\n" +
-                    "Calcium : 1.0%\n" +
-                    "Moisture : 10.0%",
-
-            "Vitamin E : 75 IU/kg\n" +
-                    "Crude Protein : 36.50%\n" +
-                    "Crude Fat (min.) : 14.0%\n" +
-                    "Crude Fiber : 4.0%\n" +
-                    "Phosphorus : 0.8%\n" +
-                    "Calcium : 1.0%\n" +
-                    "Moisture : 10.0%",
-
-            "Vitamin E : 75 IU/kg\n" +
-                    "Crude Protein : 36.50%\n" +
-                    "Crude Fat (min.) : 14.0%\n" +
-                    "Crude Fiber : 4.0%\n" +
-                    "Phosphorus : 0.8%\n" +
-                    "Calcium : 1.0%\n" +
-                    "Moisture : 10.0%",
-
-            "Vitamin E : 75 IU/kg\n" +
-                    "Crude Protein : 32.0%\n" +
-                    "Crude Fat (min.) : 7.0%\n" +
-                    "Crude Fiber : 3.0%\n" +
-                    "Phosphorus : 10%\n" +
-                    "Calcium : 1.0%\n" +
-                    "Moisture : 14.0%",
-
-            "Vitamin E : 75 IU/kg\n" +
-                    "Crude Protein : 4.0%\n" +
-                    "Crude Fat (min.) : 6.0%\n" +
-                    "Crude Fiber : 2.0%\n" +
-                    "Phosphorus : 1.2%\n" +
-                    "Calcium : 1.0%\n" +
-                    "Moisture : 10.0%",
+            "Vitamin E : 100 IU/kg, Crude Protein : 21.0%, Crude Fat (min.) : 10.0%, Crude Fiber : 4.0%, Phosphorus : 0.8%, Calcium : 1.0%, Moisture : 12.0",
+            "Vitamin E : 80 IU/kg, Zinc (Zinc sulphate, monohydrate) : 80 mg/kg, Crude Protein : 21.0%, Crude Fat (min.) : 10.0%, Crude Fiber : 4.0%, Phosphorus : 0.8%, Calcium : 1.0%, Moisture : 12.0%",
+            "Vitamin E : 100 IU/kg, Crude Protein : 21.0%, Crude Fat (min.) : 10.0%, Crude Fiber : 4.0%, Phosphorus : 0.8%, Calcium : 1.0%, Moisture : 12.0",
+            "Vitamin E : 100 IU/kg, Crude Protein : 36.50%, Crude Fat (min.) : 14.0%, Crude Fiber : 4.0%, Phosphorus : 0.8%, Calcium : 1.0%, Moisture : 10.0",
+            "Vitamin E : 75 IU/kg, Crude Protein : 36.50%, Crude Fat (min.) : 14.0%, Crude Fiber : 4.0%, Phosphorus : 0.8%, Calcium : 1.0%, Moisture : 10.0",
+            "Vitamin E : 100 IU/kg, Crude Protein : 36.50%, Crude Fat (min.) : 14.0%, Crude Fiber : 4.0%, Phosphorus : 0.8%, Calcium : 1.0%, Moisture : 10.0",
     };
 
     String[] composition = {
@@ -166,8 +96,6 @@ public class HomeFragment extends Fragment implements AdapterPetCatalog.OnGridIt
             "Grain sereal (jagung, padi), gluten tepung jagung, unggas dan unggas oleh produk, ikan laut, bungkil kedelai, stearin sawit, minyak kedelai, owder susu, garam beryodium, taurin, vitamin (A, E, B1, B6, B2 , B12, Choline, Niacin, Asam Folat), mineral (kalsium, fosfor, seng, besi, tembaga, selenium, mangan)",
             "Grain sereal (jagung, padi), gluten tepung jagung, unggas dan unggas oleh produk, ikan laut, bungkil kedelai, stearin sawit, minyak kedelai, owder susu, garam beryodium, taurin, vitamin (A, E, B1, B6, B2 , B12, Choline, Niacin, Asam Folat), mineral (kalsium, fosfor, seng, besi, tembaga, selenium, mangan)",
             "Grain sereal (jagung, padi), gluten tepung jagung, unggas dan unggas oleh produk, ikan laut, bungkil kedelai, stearin sawit, minyak kedelai, owder susu, garam beryodium, taurin, vitamin (A, E, B1, B6, B2 , B12, Choline, Niacin, Asam Folat), mineral (kalsium, fosfor, seng, besi, tembaga, selenium, mangan)",
-            "Ground Whole Grain Corn, Meat and Bone Meal, Soybean Meal, & Fish Fat",
-            "Ground Whole Grain Corn, Meat and Bone Meal, Soybean Meal, & Fish Fat"
     };
 
     public static Fragment newInstance() { return new HomeFragment(); }
