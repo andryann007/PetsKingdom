@@ -47,4 +47,10 @@
     <string name="product_image">Product Image</string>
     <string name="favorite_button">Favorite Button</string>
     <string name="sales_count">Sales Count</string>
+    <string name="product_name">Product Name</string>
+    <string name="product_price">Product Price</string>
+    <string name="product_size">Product Size</string>
+    <string name="title_deskripsi_produk">Deskripsi Produk :</string>
+    <string name="title_nutrisi">Nutrisi :</string>
+    <string name="komposisi">Komposisi :</string>
 </resources>
