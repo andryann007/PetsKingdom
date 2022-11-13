@@ -6,16 +6,9 @@
     android:layout_height="match_parent"
     tools:context=".DetailProduct">
 
-    <androidx.appcompat.widget.Toolbar
+    <include
         android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="?actionBarSize"
-        android:background="@android:color/background_dark"
-        android:layout_alignParentTop="true"
-        app:logo="@drawable/ic_back"
-        app:titleTextColor="@color/white"
-        app:title="Product Detail"
-        android:layout_centerHorizontal="true"/>
+        layout="@layout/detail_toolbar" />
 
     <ScrollView
         android:id="@+id/scrollView"

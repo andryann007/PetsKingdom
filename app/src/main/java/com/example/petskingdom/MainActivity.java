@@ -1,8 +1,10 @@
 package com.example.petskingdom;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.WindowManager;
+import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.NavController;
@@ -14,7 +16,7 @@ import com.example.petskingdom.databinding.ActivityMainBinding;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
-
+    ImageButton accountBtn, logoutBtn;
     private ActivityMainBinding binding;
 
     @SuppressLint("NonConstantResourceId")
@@ -28,5 +30,14 @@ public class MainActivity extends AppCompatActivity {
 
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_main);
         NavigationUI.setupWithNavController(navView, navController);
+
+        accountBtn = findViewById(R.id.accountButton);
+        logoutBtn = findViewById(R.id.logoutButton);
+
+        logoutBtn.setOnClickListener(view -> {
+            Intent loginIntent = new Intent(MainActivity.this, Login.class);
+            startActivity(loginIntent);
+            finish();
+        });
     }
 }

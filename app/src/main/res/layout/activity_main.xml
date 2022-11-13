@@ -6,14 +6,9 @@
     android:layout_height="match_parent"
     android:background="@drawable/background_menu">
 
-    <androidx.appcompat.widget.Toolbar
+    <include
         android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="?actionBarSize"
-        android:background="@android:color/background_dark"
-        android:layout_alignParentTop="true"
-        app:titleTextColor="@color/white"
-        app:title="Pets Kingdom"/>
+        layout="@layout/main_toolbar"/>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"
