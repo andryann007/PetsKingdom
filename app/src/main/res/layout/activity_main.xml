@@ -6,9 +6,16 @@
     android:layout_height="match_parent"
     android:background="@drawable/background_menu">
 
-    <include
+    <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
-        layout="@layout/main_toolbar"/>
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#1200B3"
+        android:elevation="5dp"
+        app:title="@string/app_name"
+        app:titleTextColor="@color/white"
+        app:titleMarginStart="125dp"
+        app:logo="@drawable/ic_account_circle"/>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"

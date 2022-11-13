@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -15,7 +14,6 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.petskingdom.DetailProduct;
-import com.example.petskingdom.MainActivity;
 import com.example.petskingdom.R;
 import com.example.petskingdom.adapter.AdapterPetCatalog;
 import com.example.petskingdom.databinding.FragmentHomeBinding;
@@ -36,15 +34,19 @@ public class HomeFragment extends Fragment implements AdapterPetCatalog.OnGridIt
             R.drawable.pedigree_3,
             R.drawable.whiskas,
             R.drawable.whiskas_2,
-            R.drawable.whiskas_3
+            R.drawable.whiskas_3,
+            R.drawable.hikari,
+            R.drawable.hikari_2
     };
     String[] title = {
-            "Pedigree Adult",
-            "Pedigree Marrobites",
-            "Pedigree Tenderbites",
-            "Whiskas Skin & Coat",
-            "Whiskas Hairball Control",
-            "Whiskas Indoor"
+            "Pedigree Dry Dog Food Adult Grilled Steak & Vegetable Flavor",
+            "Pedigree Adult Marrobites Steak and Vegetable",
+            "Pedigree With Tender Bites Complete Nutrition Adult Dry Dog Food Chicken & Steak Flavor Dog Kibble",
+            "Whiskas Dry Adult Skin & Coat",
+            "Whiskas Dry Adult Hairball Control",
+            "Whiskas Dry Adult Indoor",
+            "Hikari Hi-Growth",
+            "Hikari Sinking Goldfish Excel"
     };
     String[] price = {
             "Rp. 350.000",
@@ -52,7 +54,9 @@ public class HomeFragment extends Fragment implements AdapterPetCatalog.OnGridIt
             "Rp. 360.000",
             "Rp. 150.000",
             "Rp. 170.000",
-            "Rp. 175.000"
+            "Rp. 175.000",
+            "Rp. 350.000",
+            "Rp. 120.000"
     };
 
     String[] category = {
@@ -61,25 +65,109 @@ public class HomeFragment extends Fragment implements AdapterPetCatalog.OnGridIt
             "Dog Food",
             "Cat Food",
             "Cat Food",
-            "Cat Food"
+            "Cat Food",
+            "Fish Food",
+            "Fish Food",
     };
 
-    String[] salesCount = {
-            "230 sold",
-            "120 sold",
-            "175 sold",
-            "145 sold",
-            "120 sold",
-            "90 sold"
+    String[] size = {
+            "5.67 kg",
+            "5.44 kg",
+            "5.44 kg",
+            "4 kg",
+            "4 kg",
+            "4 kg",
+            "2 kg",
+            "0.1 kg",
     };
 
-    int[] favoriteOutlined = {
-            R.drawable.ic_favorite_border,
-            R.drawable.ic_favorite_border,
-            R.drawable.ic_favorite_border,
-            R.drawable.ic_favorite_border,
-            R.drawable.ic_favorite_border,
-            R.drawable.ic_favorite_border
+    String[] description = {
+            "Every dog deserves the best… that’s why PEDIGREE Complete Nutrition Dry Dog Food delivers 100% complete and balanced nutrition for your adult dog. It has the antioxidants, vitamins, and minerals canines need to help maintain a healthy lifestyle, and in the delicious, meaty steak flavor they love.",
+            "Every dog deserves the best… that’s why PEDIGREE Complete Nutrition Dry Dog Food delivers 100% complete and balanced nutrition for your adult dog. It has the antioxidants, vitamins, and minerals canines need to help maintain a healthy lifestyle, and in the delicious, meaty steak flavor they love.",
+            "Every dog deserves the best… that’s why PEDIGREE Complete Nutrition Dry Dog Food delivers 100% complete and balanced nutrition for your adult dog. It has the antioxidants, vitamins, and minerals canines need to help maintain a healthy lifestyle, and in the delicious, meaty steak flavor they love.",
+            "Bulu dan kulit yang indah adalah ciri khas kucing yang dirawat dengan baik dan sehat. Banyak faktor yang bisa menyebabkan kesehatan kulit & bulu yang jelek, seperti nutrisi yang buruk, berat badan yang berlebihan (yang mempersulit kucing Anda merawat tubuh mereka sendiri), usia tua dan bahkan terlalu sering dimandikan (yang bisa menghilangkan minyak alami dan menyebabkan iritasi kulit).",
+            "Kucing menghabiskan setidaknya lima jam sehari untuk merawat dirinya. Lidah mereka yang kasar seperti amplas mudah menjaring rambut yang terlepas, yang kemudiannya tertelan. Meskipun bulu tersebut biasanya bisa melewati usus dan dikeluarkan melalui feses, beberapa kucing (terutama kucing berambut panjang) cenderung membentuk hairball di perutnya. Memang kucing dapat memuntahkan hairball (sesuatu yang sudah cukup tidak menyenangkan), namun hairball yang menumpuk di perut dapat menjadi masalah serius jika tersendat pada saluran pencernaan.",
+            "Sebagai pencipta makanan kucing WHISKAS®, kami tahu bahwa kucing rumahan memiliki kebutuhan diet khusus yang perlu disesuaikan dengan gaya hidup mereka yang santai. Kucing rumahan cenderung menghabiskan waktu mereka dengan tidur dan bersantai di tempat favorit mereka seharian, mereka tidak terlalu aktif dan membutuhkan hanya sedikit energi. Karena itu, kucing rumahan lebih rentan terhadap kenaikan berat badan. Juga, dengan kurangnya bergerak, pergerakan usus merekapun menjadi lamban, ini menyebabkan feses mereka menjadi sangat bau dan mengganggu kenyamanan pemilik kucing.",
+            "A powerful summertime diet full of necessary proteins, vitamins and minerals that will allow you to have that championship size koi you've always dreamed of.",
+            "Contains Spirulina & Other Vegetable Matter Most Goldfish Crave Highly Digestible To Offer Rapid Growth & Desirable Form",
+    };
+
+    String[] nutrition = {
+            "Vitamin E : 100 IU/kg\n" +
+                    "Crude Protein : 21.0%\n" +
+                    "Crude Fat (min.) : 10.0%\n" +
+                    "Crude Fiber : 4.0%\n" +
+                    "Phosphorus : 0.8%\n" +
+                    "Calcium : 1.0%\n" +
+                    "Moisture : 12.0%",
+
+            "Vitamin E : 80 IU/kg\n" +
+                    "Zinc (Zinc sulphate, monohydrate) : 80 mg/kg\n" +
+                    "Crude Protein : 21.0%\n" +
+                    "Crude Fat (min.) : 10.0%\n" +
+                    "Crude Fiber : 4.0%\n" +
+                    "Phosphorus : 0.8%\n" +
+                    "Calcium : 1.0%\n" +
+                    "Moisture : 12.0%",
+
+            "Vitamin E : 100 IU/kg\n" +
+                    "Crude Protein : 21.0%\n" +
+                    "Crude Fat (min.) : 10.0%\n" +
+                    "Crude Fiber : 4.0%\n" +
+                    "Phosphorus : 0.8%\n" +
+                    "Calcium : 1.0%\n" +
+                    "Moisture : 12.0%",
+
+            "Vitamin E : 75 IU/kg\n" +
+                    "Crude Protein : 36.50%\n" +
+                    "Crude Fat (min.) : 14.0%\n" +
+                    "Crude Fiber : 4.0%\n" +
+                    "Phosphorus : 0.8%\n" +
+                    "Calcium : 1.0%\n" +
+                    "Moisture : 10.0%",
+
+            "Vitamin E : 75 IU/kg\n" +
+                    "Crude Protein : 36.50%\n" +
+                    "Crude Fat (min.) : 14.0%\n" +
+                    "Crude Fiber : 4.0%\n" +
+                    "Phosphorus : 0.8%\n" +
+                    "Calcium : 1.0%\n" +
+                    "Moisture : 10.0%",
+
+            "Vitamin E : 75 IU/kg\n" +
+                    "Crude Protein : 36.50%\n" +
+                    "Crude Fat (min.) : 14.0%\n" +
+                    "Crude Fiber : 4.0%\n" +
+                    "Phosphorus : 0.8%\n" +
+                    "Calcium : 1.0%\n" +
+                    "Moisture : 10.0%",
+
+            "Vitamin E : 75 IU/kg\n" +
+                    "Crude Protein : 32.0%\n" +
+                    "Crude Fat (min.) : 7.0%\n" +
+                    "Crude Fiber : 3.0%\n" +
+                    "Phosphorus : 10%\n" +
+                    "Calcium : 1.0%\n" +
+                    "Moisture : 14.0%",
+
+            "Vitamin E : 75 IU/kg\n" +
+                    "Crude Protein : 4.0%\n" +
+                    "Crude Fat (min.) : 6.0%\n" +
+                    "Crude Fiber : 2.0%\n" +
+                    "Phosphorus : 1.2%\n" +
+                    "Calcium : 1.0%\n" +
+                    "Moisture : 10.0%",
+    };
+
+    String[] composition = {
+            "Ground Whole Grain Corn, Meat and Bone Meal, Soybean Meal, Animal Fat (Source of Omega 6 Fatty Acids [Preserved with BHA & Citric Acid]), Corn Gluten Meal, Natural Flavor, Dried Plain Beet Pulp, Chicken Byproduct Meal, Salt, Ground Whole Grain Wheat, Brewers Rice, Potassium Chloride, Calcium Carbonate, Choline Chloride, Dried Peas, DL-Methionine, Natural Grilled Steak Flavor, Zinc Sulfate, Yellow 6, Monocalcium Phosphate, Vitamin E Supplement, L-Tryptophan, Yellow 5, Red 40, Blue 2, Dried Carrots, Niacin Supplement (Vitamin B3), Copper Sulfate, Sodium Selenite, Potassium Iodide, D-Calcium Pantothenate (Source of Vitamin B5), Vitamin A Supplement, Riboflavin Supplement (Vitamin B2), Vitamin B12 Supplement, Thiamine Mononitrate (Vitamin B1), Vitamin D3 Supplement, Pyridoxine Hydrochloride (Vitamin B6), Folic Acid.",
+            "Ground Whole Grain Corn, Meat And Bone Meal, Corn Gluten Meal, Soybean Meal, Animal Fat (Source Of Omega 6 Fatty Acids) [Preserved With BHA & Citric Acid], Natural Flavor, Dried Plain Beet Pulp, Salt, Cooked Bone Marrow, Potassium Chloride, Choline Chloride, Calcium Carbonate, Dried Peas, DL-Methionine, Natural Grilled Steak Flavor, Yellow 6, Zinc Sulfate, Vitamin E Supplement, Yellow 5, Red 40, L-Tryptophan, Dried Carrots, Blue 2, Niacin [Vitamin B3], D-Calcium Pantothenate [Source Of Vitamin B5], Copper Sulfate, Sodium Selenite, Potassium Iodide, Vitamin A Supplement, Riboflavin Supplement [Vitamin B2], Vitamin B12 Supplement, Thiamine Mononitrate [Vitamin B1], Vitamin D3 Supplement, Pyridoxine Hydrochloride [Vitamin B6], Folic Acid",
+            "Ground Whole Grain Corn, Meat and Bone Meal, Soybean Meal, Animal Fat (Source of Omega 6 Fatty Acids [Preserved with BHA & Citric Acid]), Corn Gluten Meal, Natural Flavor, Dried Plain Beet Pulp, Chicken Byproduct Meal, Chicken Meal, Glycerin, Salt, Sugar, Ground Whole Grain Wheat, Potassium Chloride, Choline Chloride, Calcium Carbonate, Phosphoric Acid, Dried Peas, DL-Methionine, Potassium Sorbate (preservative), Natural Grilled Steak Flavor, Zinc Sulfate, Yellow 6, Vitamin E Supplement, L-Tryptophan, Red 40, Yellow 5, Blue 2, Dried Carrots, Niacin Supplement (Vitamin B3), Copper Sulfate, Sodium Selenite, Potassium Iodide, D-Calcium Pantothenate (Source of Vitamin B5), Vitamin A Supplement, Riboflavin Supplement (Vitamin B2), Vitamin B12 Supplement, Thiamine Mononitrate (Vitamin B1), Vitamin D3 Supplement, Pyridoxine Hydrochloride (Vitamin B6), Folic Acid.",
+            "Grain sereal (jagung, padi), gluten tepung jagung, unggas dan unggas oleh produk, ikan laut, bungkil kedelai, stearin sawit, minyak kedelai, owder susu, garam beryodium, taurin, vitamin (A, E, B1, B6, B2 , B12, Choline, Niacin, Asam Folat), mineral (kalsium, fosfor, seng, besi, tembaga, selenium, mangan)",
+            "Grain sereal (jagung, padi), gluten tepung jagung, unggas dan unggas oleh produk, ikan laut, bungkil kedelai, stearin sawit, minyak kedelai, owder susu, garam beryodium, taurin, vitamin (A, E, B1, B6, B2 , B12, Choline, Niacin, Asam Folat), mineral (kalsium, fosfor, seng, besi, tembaga, selenium, mangan)",
+            "Grain sereal (jagung, padi), gluten tepung jagung, unggas dan unggas oleh produk, ikan laut, bungkil kedelai, stearin sawit, minyak kedelai, owder susu, garam beryodium, taurin, vitamin (A, E, B1, B6, B2 , B12, Choline, Niacin, Asam Folat), mineral (kalsium, fosfor, seng, besi, tembaga, selenium, mangan)",
+            "Ground Whole Grain Corn, Meat and Bone Meal, Soybean Meal, & Fish Fat",
+            "Ground Whole Grain Corn, Meat and Bone Meal, Soybean Meal, & Fish Fat"
     };
 
     public static Fragment newInstance() { return new HomeFragment(); }
@@ -123,8 +211,7 @@ public class HomeFragment extends Fragment implements AdapterPetCatalog.OnGridIt
             modelPetCatalog.setTitle(title[i]);
             modelPetCatalog.setDescription(price[i]);
             modelPetCatalog.setCategory(category[i]);
-            modelPetCatalog.setSalesCount(salesCount[i]);
-            modelPetCatalog.setFavoriteOutlined(favoriteOutlined[i]);
+            modelPetCatalog.setFavoriteOutlined(R.drawable.ic_favorite_border);
             list.add(modelPetCatalog);
         }
         adapterPetCatalog.addAll(list);
@@ -142,7 +229,10 @@ public class HomeFragment extends Fragment implements AdapterPetCatalog.OnGridIt
         intentDetail.putExtra("productImage", imageId[position]);
         intentDetail.putExtra("productName", title[position]);
         intentDetail.putExtra("productPrice", price[position]);
+        intentDetail.putExtra("productSize", size[position]);
+        intentDetail.putExtra("productDescription", description[position]);
+        intentDetail.putExtra("productNutrition", nutrition[position]);
+        intentDetail.putExtra("productComposition", composition[position]);
         startActivity(intentDetail);
-        Toast.makeText(context, adapterPetCatalog.getItem(position).getTitle(), Toast.LENGTH_SHORT).show();
     }
 }

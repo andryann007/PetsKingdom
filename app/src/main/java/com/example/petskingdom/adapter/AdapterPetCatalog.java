@@ -1,15 +1,12 @@
 package com.example.petskingdom.adapter;
 
-import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.petskingdom.R;
@@ -66,7 +63,6 @@ public class AdapterPetCatalog extends RecyclerView.Adapter<AdapterPetCatalog.Vi
         holder.title.setText(modelPetCatalog.getTitle());
         holder.description.setText(modelPetCatalog.getDescription());
         holder.category.setText(modelPetCatalog.getCategory());
-        holder.salesCount.setText(modelPetCatalog.getSalesCount());
         holder.favoriteOutlined.setImageResource(modelPetCatalog.getFavoriteOutlined());
     }
 
@@ -77,7 +73,7 @@ public class AdapterPetCatalog extends RecyclerView.Adapter<AdapterPetCatalog.Vi
 
     public static class ViewHolderPetCatalog extends RecyclerView.ViewHolder{
         public ImageView imageView, favoriteOutlined;
-        public TextView title, description, category, salesCount;
+        public TextView title, description, category;
 
         public ViewHolderPetCatalog(View itemView){
             super(itemView);
@@ -85,7 +81,6 @@ public class AdapterPetCatalog extends RecyclerView.Adapter<AdapterPetCatalog.Vi
             title = itemView.findViewById(R.id.title);
             description = itemView.findViewById(R.id.description);
             category = itemView.findViewById(R.id.categoryProduct);
-            salesCount = itemView.findViewById(R.id.salesCount);
             favoriteOutlined = itemView.findViewById(R.id.favoriteButton);
         }
     }

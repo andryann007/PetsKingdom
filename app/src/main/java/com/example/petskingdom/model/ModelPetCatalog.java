@@ -2,7 +2,7 @@ package com.example.petskingdom.model;
 
 public class ModelPetCatalog {
     private int imageId, favoriteOutlined;
-    private String title, description, category, salesCount;
+    private String title, description, category;
 
     public int getImageId(){
         return imageId;
@@ -31,8 +31,4 @@ public class ModelPetCatalog {
     public String getCategory(){ return category; }
 
     public void setCategory(String category){ this.category = category; }
-
-    public String getSalesCount(){ return salesCount; }
-
-    public void setSalesCount(String salesCount){ this.salesCount = salesCount; }
 }

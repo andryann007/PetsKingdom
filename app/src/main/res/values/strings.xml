@@ -54,4 +54,5 @@
     <string name="title_nutrisi">Nutrisi :</string>
     <string name="komposisi">Komposisi :</string>
     <string name="product_detail">Product Detail</string>
+    <string name="developer">Developer</string>
 </resources>

@@ -1,17 +1,15 @@
 package com.example.petskingdom;
 
 import android.annotation.SuppressLint;
-import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.WindowManager;
-import android.widget.ImageButton;
-import android.widget.Toast;
+import android.view.Menu;
+import android.view.MenuItem;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
-import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 import com.example.petskingdom.databinding.ActivityMainBinding;
@@ -19,14 +17,10 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
-    ImageButton accountBtn, logoutBtn;
     private ActivityMainBinding binding;
 
     //firebase auth
     private FirebaseAuth firebaseAuth;
-
-    //progress dialog
-    private ProgressDialog progressDialog;
 
     @SuppressLint("NonConstantResourceId")
     @Override
@@ -40,21 +34,24 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_main);
         NavigationUI.setupWithNavController(navView, navController);
 
-        progressDialog = new ProgressDialog(this);
-        progressDialog.setTitle("Please wait");
-        progressDialog.setMessage("Successfully Logout !!!");
-        progressDialog.setCanceledOnTouchOutside(false);
-
         firebaseAuth = FirebaseAuth.getInstance();
-        accountBtn = findViewById(R.id.accountButton);
-        logoutBtn = findViewById(R.id.logoutButton);
+    }
 
-        logoutBtn.setOnClickListener(view -> {
-            progressDialog.show();
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_toolbar, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        int id = item.getItemId();
+
+        if(id == R.id.logout){
             firebaseAuth.signOut();
-            Intent loginIntent = new Intent(MainActivity.this, Login.class);
-            startActivity(loginIntent);
+            startActivity(new Intent(MainActivity.this, Login.class));
             finish();
-        });
+        }
+        return true;
     }
 }
