@@ -35,7 +35,8 @@ public class MainActivity extends AppCompatActivity {
 
         binding.btnLogout.setOnClickListener(view -> {
             firebaseAuth.signOut();
-            startActivity(new Intent(MainActivity.this, Login.class));
+            Intent logoutIntent = new Intent(MainActivity.this, Login.class);
+            startActivity(logoutIntent);
             finish();
         });
     }

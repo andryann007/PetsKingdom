@@ -1,38 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginHorizontal="10dp"
-    android:background="@color/white"
     tools:context=".ui.account.AccountFragment">
-
-    <TextView
-        android:id="@+id/developerProfile"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="5dp"
-        android:text="@string/developer_profile"
-        android:fontFamily="sans-serif"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        android:textStyle="bold" />
 
     <ScrollView
         android:id="@+id/scrollView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/developerProfile">
+        android:background="@color/white"
+        android:layout_marginHorizontal="10dp">
 
         <RelativeLayout
             android:id="@+id/containerContent"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+            <TextView
+                android:id="@+id/developerProfile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="@string/developer_profile"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
             <ImageView
                 android:id="@+id/imageProfile"
                 android:layout_width="240dp"
                 android:layout_height="240dp"
+                android:layout_below="@id/developerProfile"
                 android:layout_marginBottom="5dp"
                 android:layout_centerHorizontal="true"
                 android:src="@drawable/ic_account"
@@ -278,4 +278,4 @@
 
     </ScrollView>
 
-</RelativeLayout>
+</FrameLayout>
