@@ -9,13 +9,53 @@
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/detailToolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="?actionBarSize"
         android:background="#1200B3"
         android:elevation="5dp"
-        app:title="@string/product_detail"
-        app:titleTextColor="@color/white"
-        app:titleMarginStart="125dp"
-        app:logo="@drawable/ic_back"/>
+        app:titleTextColor="@color/white">
+
+        <RelativeLayout
+            android:id="@+id/contentToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center">
+
+            <ImageButton
+                android:id="@+id/btnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_back"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/back_button" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="@string/product_detail"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:ignore="RelativeOverlap" />
+
+            <ImageButton
+                android:id="@+id/btnShare"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginHorizontal="15dp"
+                android:src="@drawable/ic_share"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/share_button" />
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
 
     <ScrollView
         android:id="@+id/scrollView"
@@ -90,7 +130,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="10dp"
-                android:layout_marginVertical="5dp"
+                android:layout_marginVertical="2.5dp"
                 android:layout_below="@id/horizontalDivider1"
                 android:text="@string/title_deskripsi_produk"
                 android:fontFamily="sans-serif"
@@ -123,7 +163,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="10dp"
-                android:layout_marginVertical="5dp"
+                android:layout_marginVertical="2.5dp"
                 android:layout_below="@id/horizontalDivider2"
                 android:text="@string/title_nutrisi"
                 android:fontFamily="sans-serif"
@@ -156,7 +196,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="10dp"
-                android:layout_marginVertical="5dp"
+                android:layout_marginVertical="2.5dp"
                 android:layout_below="@id/horizontalDivider3"
                 android:text="@string/komposisi"
                 android:fontFamily="sans-serif"

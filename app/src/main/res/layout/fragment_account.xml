@@ -1,12 +1,281 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginHorizontal="10dp"
+    android:background="@color/white"
     tools:context=".ui.account.AccountFragment">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
+    <TextView
+        android:id="@+id/developerProfile"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-</FrameLayout>
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:text="@string/developer_profile"
+        android:fontFamily="sans-serif"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/developerProfile">
+
+        <RelativeLayout
+            android:id="@+id/containerContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageProfile"
+                android:layout_width="240dp"
+                android:layout_height="240dp"
+                android:layout_marginBottom="5dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_account"
+                android:contentDescription="@string/profile_image" />
+
+            <View
+                android:id="@+id/divider1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/imageProfile"
+                android:background="@android:color/black" />
+
+            <TextView
+                android:id="@+id/nimRequest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/divider1"
+                android:layout_marginBottom="2.5dp"
+                android:text="@string/nim"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/nimTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/nimRequest"
+                android:layout_marginBottom="2.5dp"
+                android:text="@string/my_nim"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <View
+                android:id="@+id/divider2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/nimTV"
+                android:background="@android:color/black" />
+
+            <TextView
+                android:id="@+id/namaRequest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/divider2"
+                android:layout_marginBottom="2.5dp"
+                android:text="@string/nama"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/namaTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/namaRequest"
+                android:layout_marginBottom="2.5dp"
+                android:text="@string/my_name"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <View
+                android:id="@+id/divider3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/namaTV"
+                android:background="@android:color/black" />
+
+            <TextView
+                android:id="@+id/kelasRequest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/divider3"
+                android:layout_marginBottom="2.5dp"
+                android:text="@string/kelas"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/kelasTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/kelasRequest"
+                android:layout_marginBottom="2.5dp"
+                android:text="@string/my_class"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <View
+                android:id="@+id/divider4"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/kelasTV"
+                android:background="@android:color/black" />
+
+            <TextView
+                android:id="@+id/jurusanRequest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/divider4"
+                android:layout_marginBottom="2.5dp"
+                android:text="@string/program_studi"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/jurusanTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/jurusanRequest"
+                android:layout_marginBottom="2.5dp"
+                android:text="@string/my_study"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <View
+                android:id="@+id/divider5"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/jurusanTV"
+                android:background="@android:color/black" />
+
+            <TextView
+                android:id="@+id/telpRequest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/divider5"
+                android:layout_marginBottom="2.5dp"
+                android:text="@string/no_telepon"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/telpTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/telpRequest"
+                android:layout_marginBottom="2.5dp"
+                android:text="@string/my_phone"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <View
+                android:id="@+id/divider6"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/telpTV"
+                android:background="@android:color/black" />
+
+            <TextView
+                android:id="@+id/emailRequest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/divider6"
+                android:layout_marginBottom="2.5dp"
+                android:text="@string/email"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/emailTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/emailRequest"
+                android:layout_marginBottom="2.5dp"
+                android:text="@string/my_email"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <View
+                android:id="@+id/divider7"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/emailTV"
+                android:background="@android:color/black" />
+
+            <TextView
+                android:id="@+id/contactList"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
+                android:layout_below="@id/divider7"
+                android:text="@string/contact_me"
+                android:fontFamily="sans-serif"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:id="@+id/containerFAB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/contactList"
+                android:gravity="center">
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/fabEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="2.5dp"
+                    android:src="@drawable/ic_email_black"/>
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/fabPhone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/fabEmail"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="2.5dp"
+                    android:src="@drawable/ic_phone_black"/>
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/divider8"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/containerFAB"
+                android:layout_marginVertical="5dp"
+                android:background="@android:color/black" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
