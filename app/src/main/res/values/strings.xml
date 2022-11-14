@@ -74,4 +74,7 @@
     <string name="email">Email</string>
     <string name="my_email">s31190080@student.ubm.ac.id</string>
     <string name="contact_me">Contact Me :</string>
+    <string name="or">OR</string>
+    <string name="fab_phone">Floating Action Button Phone</string>
+    <string name="fab_email">Floating Action Button Email</string>
 </resources>
